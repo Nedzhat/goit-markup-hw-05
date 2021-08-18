@@ -56,9 +56,21 @@
       <section class="services">
         <div class="content">
           <h1 class="services-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="services-btn">Заказать услугу</button>
+          <button type="button" class="services-btn" data-modal-open>
+            Заказать услугу
+          </button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="close" data-modal-close>
+              <svg class="close-icon">
+                <use href="./images/symbol-defs.svg#close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
+
       <section class="features">
         <div class="container">
           <ul class="features-list list">
@@ -123,6 +135,7 @@
                 alt="Работа на планшете"
                 width="370"
               />
+              <p class="work-desc">Десктопные приложения</p>
             </li>
             <li class="item">
               <img
@@ -130,6 +143,7 @@
                 alt="Работа за ноутбуком"
                 width="370"
               />
+              <p class="work-desc">Мобильные приложения</p>
             </li>
             <li class="item">
               <img
@@ -137,6 +151,7 @@
                 alt="Работа за графическим планшетом"
                 width="370"
               />
+              <p class="work-desc">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -368,7 +383,7 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <section class="footer-contacts">
+        <div class="footer-contacts">
           <a href="#" class="logo logo-unique"
             ><span class="logo-accent">Web</span>Studio</a
           >
@@ -387,8 +402,8 @@
               </li>
             </ul>
           </address>
-        </section>
-        <section class="footer-social-links">
+        </div>
+        <div class="footer-social-links">
           <h2 class="footer-social-links-title">присоединяйтесь</h2>
           <ul class="social-links list">
             <li class="social-links-item">
@@ -420,8 +435,9 @@
               </a>
             </li>
           </ul>
-        </section>
+        </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
